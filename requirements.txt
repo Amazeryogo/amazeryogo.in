@@ -1,2 +1,4 @@
 waitress
 flask
+flask-bootstrap
+requests
