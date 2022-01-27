@@ -8,20 +8,64 @@
     <title>Amazeryogo's Website</title>
   </head>
   <body>
+
   <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
       <a class="navbar-brand" href="/projects">Projects</a>
       <a class="navbar-brand" href="/contactme">Contact me!</a>
   </nav>
+    <div class="container-fluid">
     <h1 style="text-align: center">Hello, This is Suvid!</h1>
-    <img src="{{ gravatar }}" style="display: block;margin-left: auto;margin-right: auto;">
-    <footer class="footer">
+    <img src="{{ gravatar }}" alt="my amazing pfp" style="display: block;margin-left: auto;margin-right: auto;" class="image-circle">
+    <div class="card">
+        <h5 class="card-header">Academic Information</h5>
+        <div class="card-body">
+            <p class="card-text">Age: 14/Class: 9</p>
+            <p class="card-text">School: PSBB Millenium School, Chennai</p>
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3">
+        <h5 class="card-header">Information related to computers</h5>
+        <div class="card-body">
+            <p class="card-text">OS: Pop!_OS, Fedora</p>
+            <p class="card-text">Laptop: Xiaomi Mi Notebook 14 Horizon Edition</p>
+            <p class="card-text">Desktop: Intel Nuc NUC8i5BEH</p>
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header">Information related to programming</h5>
+        <div class="card-body">
+            <p class="card-text">Languages: Python, HTML, CSS, Bash</p>
+            <p class="card-text">Frameworks: Flask, Django, LAMP</p>
+            <p class="card-text">Tools: Pycharm Professional</p>
+        </div>
+    </div>
+    <div class="card text-white bg-dark mb-3">
+        <h5 class="card-header">Personal Information</h5>
+        <div class="card-body">
+            <h3 class="card-text">Hobbies:</h3> <p class="card-text"> * collecting stamps<br/>  * reading novels<br/>  * playing badminton <br/>   * watching anime<br/>   * making new projects on github</p>
+            <h3 class="card-text">Interests:</h3> <p class="card-text">* Maths<br/>  * Linux</p></h3>
+        </div>
+    </div>
+
+  <div class="card text-dark bg-info mb-3">
+      <div class="card-header">
+          <h3 class="card-title">My Favourite Books</h3>
+      </div>
+      <div class="class-body">
+          {% for book in books %}
+          <h3 class="card-text" style="text-align: center">{{ book['name'] }}</h3>
+          <p class="card-text" style="text-align: center">{{ book['author'] }}</p>
+          {% endfor %}
+      </div>
+  </div>
+  </div>
+    <h1 style="text-align: center">That is pretty much about me, thanks for reading! :)</h1>
+        <footer class="footer">
       <div class="container">
         <span class="text-muted" style="text-align: center">&copy; 2022 Suvid Datta/Amazeryogo</span> <br/>
           <span class="text-muted" style="text-align: center">This site was visited by {{ ip }}</span>
-
       </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>

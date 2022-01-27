@@ -15,7 +15,7 @@ def index():
     gravatar = "https://www.gravatar.com/avatar/%s?d=identicon&s=200" % hashlib.md5(
         email.encode()).hexdigest()
     ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
-    return render_template('index.html', ip=ip, gravatar=gravatar)
+    return render_template('index.html', ip=ip, gravatar=gravatar,books=favbooks)
 
 
 @app.route('/contactme')
