@@ -1,4 +1,4 @@
-email = "mailto:suvid.datta@gmail.com"
+email = "suvid.datta@gmail.com"
 reddit = "https://www.reddit.com/user/Amazeryogo"
 twitch = "https://www.twitch.tv/amazeryogo29"
 youtube = "https://www.youtube.com/channel/UCTqxrChE3FXhy_yJg93pX4A"
