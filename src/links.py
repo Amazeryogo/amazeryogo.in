@@ -6,6 +6,7 @@ spotify = "https://open.spotify.com/user/p46kuy15wgr1aa8x132asq9o4?si=65c67f78ee
 thought = "http://thoughtappbeta.herokuapp.com/Amazeryogo"
 blog = "https://amazeryogo.blogspot.com"
 github = "https://github.com/Amazeryogo"
+instagram = "https://www.instagram.com/amazeryogo/"
 favbooks = {
                "name": "The Hitchhiker's Guide to the Galaxy",
                "author": "By Douglas Adams"

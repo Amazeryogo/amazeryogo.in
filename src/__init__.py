@@ -20,7 +20,7 @@ def index():
 
 @app.route('/contactme')
 def contact():
-    return render_template('contactme.html', email=email, reddit=reddit, twitch=twitch, youtube=youtube, spotify=spotify, thought=thought, blog=blog, github=github,favbooks=favbooks)
+    return render_template('contactme.html', email=email,instagram=instagram, reddit=reddit, twitch=twitch, youtube=youtube, spotify=spotify, thought=thought, blog=blog, github=github,favbooks=favbooks)
 
 @app.route('/projects')
 def projects():
