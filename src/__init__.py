@@ -14,7 +14,10 @@ def index():
     # get gravatar image
     gravatar = "https://www.gravatar.com/avatar/%s?d=identicon&s=200" % hashlib.md5(
         email.encode()).hexdigest()
-    ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
+    if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
+        ip = request.environ['REMOTE_ADDR']
+    else:
+        ip = request.environ['HTTP_X_FORWARDED_FOR']
     return render_template('index.html', ip=ip, gravatar=gravatar,books=favbooks)
 
 
