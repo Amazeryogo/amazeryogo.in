@@ -1,3 +1,4 @@
 src/links.py
 src/__pycache__/*
 .idea/*
+venv
