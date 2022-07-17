@@ -7,56 +7,53 @@
 
     <title>Amazeryogo's Website</title>
       <style>
-          body {background-image: url('onepiece.jpg');   background-attachment: fixed;
+          body {background-image: url('static/onepiece.jpg');   background-attachment: fixed;
   background-size: 100% 100%;
  background-repeat: no-repeat;}
+          .test a{padding:10px;}
+          .tost {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  border: 1px solid #dadada;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h3 {
+  padding: 2px;
+  margin: 8px 0;
+}
+
+.card:hover {
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card .container {
+  padding: 2px 6px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card h4 {
+  margin-top: auto;
+}
+
+.card p {
+  margin: 14px 0;
+}
       </style>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="collapse navbar-collapse" id="#navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="/projects">Projects</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="https://project-inspirations.herokuapp.com/">Old website</a>
-        </li>
-        </ul>
-    </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-    <div class="container-fluid">
-    <img src="{{ gravatar }}" alt="my amazing pfp" style="display: block;margin-left: auto;margin-right: auto;" class="image-circle">
-    <h2 style="text-align: center">Hello There! I'm Suvid Datta!</h2>
-    <h1 class="text-warning" style="text-align: center">I AM REMAKING THIS WEBSITE!!!</h1>
-    <h6 class="text-warning" style="text-align: center">Please checkout <a href="https://project-inspirations.herokuapp.com/">my old website</a>while i redo my new website!</h6>
-    <div class="card-transparent text-black mb-3">
-        <h5 class="card-header">About Me!</h5>
-        <div class="card-body">
-            <p class="card-text">I am 15 years old. I study at The PSBB Millennium School, Chennai.</p>
-            <h3 class="card-text">My Hobbies are</h3> <p class="card-text">*Reading<br/>*Listening to music<br/>*Collecting Stamps <br/>*Playing Badminton <br/> And ofcourse, writing code.</p>
-        </div>
-    </div>
-    <div class="card-transparent">
-        <h5 class="card-header">Things about Programming</h5>
-        <div class="card-body">
-            <p class="card-text">I am very fluent in writing Python, it is my main goto programming language for any project of any kind,but I can somewhat write code in C/C++ and Prolog.</p>
-            <p class="card-text">For web development, I usually use Flask or Django</p>
-            <p class="card-text">My main IDE is Pycharm, but i do sometimes use Atom for non-python projects</p>
-        </div>
-    </div>
-        <h2>My Favourite Books</h2>
-        <ul class="list-group-transparent list-group-expand-lg">
-          {% for book in books %}
-              <li class="list-group-item-transparent">{{ book['name'] }}<br/>by {{ book['author'] }}</li>
-          {% endfor %}
-        </ul>
-
-      <footer class="footer">
-      <div class="navbar-transparent">
+    <nav class="navbar navbar-dark bg-info test">
+      <a class="nav-link" href="/projects">Projects</a>
+      <a class="nav-link" href="https://project-inspirations.herokuapp.com/">Old website</a>
       <a href="mailto:suvid.datta@gmail.com"><img src="static/gmail.png" width="40" height="40" alt="mail"></a>
       <a href="https://www.instagram.com/amazeryogo/"><img src="static/instagram.png" width="40" height="40" alt="instagram"></a>
       <a href="https://github.com/Amazeryogo"><img src="static/github.png" width="40" height="40" alt="github"></a>
@@ -65,9 +62,33 @@
       <a href="https://www.youtube.com/channel/UCTqxrChE3FXhy_yJg93pX4A"><img src="static/youtube.png" width="40" height="40" alt="Youtube"></a>
       <a href="https://open.spotify.com/user/p46kuy15wgr1aa8x132asq9o4?si=z8QyJlt8SiWFL1r-4bNO3w"><img src="static/spotify.png" width="40" height="40" alt="spotify"></a>
       <a href="https://lifeonearth1024.blogspot.com/"><img src="static/blog.png" width="40" height="40" alt="blog"></a>
-      <br/>
-      <br/>
+    </nav>
+    <div class="" style="display: block;margin-left: auto;margin-right: auto;">
+  <img class="card-img-top" src="{{ gravatar }}" alt="" style="width: 10%;display: block;margin-left: auto;margin-right: auto;">
+  <div class="card-body">
+    <h1 class="card-text" style="text-align: center">Hello There, I'm Suvid Datta! </h1>
   </div>
+</div>
+    <div class="tost">
+    <div class="card-transparent" style="width: 50%;">
+  <div class="card-body">
+    <h2 class="card-title">Introduction</h2>
+    <h5 class="card-text">
+        Hello! My name is Suvid Datta and I'm 15 years old. <br/>I study at the PSBB Millenium School, Chennai. <br/> I write code to make my lazy life easier.
+    </h5>
+  </div>
+</div>
+        <div class="card-transparent" style="width: 50%; height: auto">
+  <div class="card-body">
+    <h2 class="card-title">Github stats</h2>
+      <div class="card-body">
+    <iframe src="https://github-readme-stats.vercel.app/api?username=Amazeryogo&show_icons=true&theme=tokyonight"></iframe>
+    <iframe src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amazeryogo&layout=compact"></iframe>
+      </div>
+  </div>
+</div>
+    </div>
+    <footer>
         <h6  class="text-muted" style="text-align: center">&copy; 2022 Suvid Datta/Amazeryogo</h6>
             <h6 class="text-muted" style="text-align: center">Your IP is {{ip}} , dont panic</h6>
     </footer>

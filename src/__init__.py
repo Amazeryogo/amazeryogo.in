@@ -12,7 +12,7 @@ Bootstrap(app)
 @app.route('/')
 def index():
     # get gravatar image
-    gravatar = "https://www.gravatar.com/avatar/%s?d=identicon&s=200" % hashlib.md5(
+    gravatar = "https://www.gravatar.com/avatar/%s?d=identicon&s=128" % hashlib.md5(
         email.encode()).hexdigest()
     if request.environ.get('HTTP_X_FORWARDED_FOR') is None:
         ip = request.environ['REMOTE_ADDR']
@@ -30,3 +30,7 @@ def projects():
     # get all repos from api.github.com
     repos = json.loads(requests.get("https://api.github.com/users/Amazeryogo/repos").text)
     return render_template('projects.html', repos=repos)
+
+@app.route('/inspiration')
+def inspiration():
+    return render_template('inspiration.html')
