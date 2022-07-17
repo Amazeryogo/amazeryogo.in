@@ -22,4 +22,7 @@ favbooks = {
            }, {
                "name": "My Family and other animals",
                "author": "By Gerand Durrel"
+           }, {
+               "name": "Delhi is not far",
+               "author": " By Ruskin Bond"
            }
