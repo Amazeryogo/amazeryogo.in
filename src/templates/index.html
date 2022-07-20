@@ -86,31 +86,34 @@
   </div>
 </div>
     </div>
-
+    <div class="card-transparent" style="width: 100%">
+    <h2 class="card-title" style="text-align: center">Information related to programming</h2>
+    <p class="card-text" style="text-align: center">I primarily use Python for most of my projects. I sometimes use C or C++ when it is needed.<br/></p>
+  </div>
+</div>
     <div class="tost">
     <div class="card-transparent" style="width: 50%; height: auto">
     <div class="card-body">
-    <h2 class="card-title">My Hobbies</h2>
-    <h4 class="card-text">
+    <h4 class="card-title">My Hobbies</h4>
+    <h5 class="card-text">
         * Playing Badminton <br/>
         * Reading books <br/>
         * listening to music <br/>
         * Watching One Piece <br/>
-        * Collecting Stamps
-
-    </h4>
+        * Writing Code
+    </h5>
   </div>
     </div>
   <div class="card-transparent" style="width: 50%; height: auto">
   <div class="card-body">
-    <h2 class="card-title">My Favourite Books</h2>
+    <h3 class="card-title" style="text-align: center">My Favourite Books</h3>
       {% for book in books %}
-    <h5 class="card-text">
+    <h5 class="card-text" style="text-align: center">
         {{ book.name }}
     </h5>
-    <p class="card-text">
+    <h6 class="card-text" style="text-align: center">
         {{ book.author }}
-    </p>
+    </h6>
       {%  endfor %}
   </div>
 </div>
