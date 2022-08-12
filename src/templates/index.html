@@ -1,127 +1,95 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Suvid Datta's Website</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
-    <title>Amazeryogo's Website</title>
-      <style>
-          body {background-image: url('static/background.jpg');   background-attachment: fixed;
-  background-size: 100% 100%;
- background-repeat: no-repeat;}
-          .test a{padding:10px;}
-          .tost {
-  display: flex;
-  flex-direction: row;
+    <style>
+        .wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
 }
 
-.card {
-  border: 1px solid #dadada;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.2s;
-  width: 50%;
-  display: flex;
-  flex-direction: column;
+.typing {
+  width: 36ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
 }
 
-.card h3 {
-  padding: 2px;
-  margin: 8px 0;
+@keyframes typing {
+  from {
+    width: 0
+  }
 }
 
-.card:hover {
-  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.2);
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }
-
-.card .container {
-  padding: 2px 6px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
+.bgimg {
+    background-image: url(op.jpg);
 }
-
-.card h4 {
-  margin-top: auto;
+footer {
+  text-align: center;
+  padding: 3px;
+  color: white;
 }
-
-.card p {
-  margin: 14px 0;
-}
-      </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-transparent test">
-      <a href="mailto:suvid.datta@gmail.com"><img src="static/gmail.png" width="40" height="40" alt="mail"></a>
-      <a href="https://www.instagram.com/amazeryogo/"><img src="static/instagram.png" width="40" height="40" alt="instagram"></a>
-      <a href="https://github.com/Amazeryogo"><img src="static/github.png" width="40" height="40" alt="github"></a>
-      <a href="https://www.reddit.com/user/Amazeryogo"><img src="static/reddit.png" width="40" height="40" alt="reddit"></a>
-      <a href="https://www.twitch.tv/amazeryogo29"><img src="static/twitch.png" width="40" height="40" alt="twitch"></a>
-      <a href="https://www.youtube.com/channel/UCTqxrChE3FXhy_yJg93pX4A"><img src="static/youtube.png" width="40" height="40" alt="Youtube"></a>
-      <a href="https://open.spotify.com/user/p46kuy15wgr1aa8x132asq9o4?si=z8QyJlt8SiWFL1r-4bNO3w"><img src="static/spotify.png" width="40" height="40" alt="spotify"></a>
-      <a href="https://lifeonearth1024.blogspot.com/"><img src="static/blog.png" width="40" height="40" alt="blog"></a>
-    </nav>
-    <div class="" style="display: block;margin-left: auto;margin-right: auto;">
-  <img class="card-img-top" src="{{ gravatar }}" alt="" style="width: 10%;display: block;margin-left: auto;margin-right: auto;">
-  <div class="card-body">
-    <h1 class="card-text" style="text-align: center">Hello There, I'm Suvid Datta! </h1>
-  </div>
-</div>
-    <div class="tost">
-    <div class="card-transparent" style="width: 50%;">
-  <div class="card-body">
-    <h2 class="card-title">Introduction</h2>
-    <h5 class="card-text">
-        Hello! My name is Suvid Datta and I'm 15 years old. <br/>I study at the PSBB Millenium School, Chennai. <br/> I write code to make my lazy life easier.
-    </h5>
-  </div>
-</div>
-        <div class="card-transparent" style="width: 50%; height: auto">
-  <div class="card-body">
-    <h2 class="card-title">Github stats</h2>
-      <div class="card-body">
-    <iframe src="https://github-readme-stats.vercel.app/api?username=Amazeryogo&show_icons=true&theme=tokyonight"></iframe>
-    <iframe src="https://github-readme-stats.vercel.app/api/top-langs/?username=Amazeryogo&layout=compact"></iframe>
-      </div>
-  </div>
-</div>
+</style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <div class="wrapper">
+        <div class="typing"><h1>Hello There, I'm Suvid Datta!</h1></div>
     </div>
-    <div class="card-transparent" style="width: 100%">
-    <h2 class="card-title" style="text-align: center">Information related to programming</h2>
-    <p class="card-text" style="text-align: center">I primarily use Python for most of my projects. I sometimes use C or C++ when it is needed.<br/></p>
-  </div>
-</div>
-    <div class="tost">
-    <div class="card-transparent" style="width: 50%; height: auto">
-    <div class="card-body">
-    <h4 class="card-title">My Hobbies</h4>
-    <h5 class="card-text">
-        * Playing Badminton <br/>
-        * Reading books <br/>
-        * listening to music <br/>
-        * Watching One Piece <br/>
-        * Writing Code
-    </h5>
-  </div>
+
+<div class="container-fluid bgimg">
+    <div class="row">
+        <div class="container-fluid">
+            <div class="card" >
+                <div class="card-body">
+                    <h3 class="card-title" style="text-align: center;font-family: monospace;font-size: 2em;">About me 👋</h3>
+                    <h5 style="text-align: center;font-family: monospace;font-size: 1em;">I am 15 years old and I study at the PSBB Millennium School, Chennai.</h5>
+                    <h5 style="text-align: center;font-family: monospace;font-size: 1em;">Programming is one of my hobbies along with reading books, listening to music, playing badminton and cycling.</h5>
+                </div>
+            </div>
+        </div>
     </div>
-  <div class="card-transparent" style="width: 50%; height: auto">
-  <div class="card-body">
-    <h3 class="card-title" style="text-align: center">My Favourite Books</h3>
-      {% for book in books %}
-    <h5 class="card-text" style="text-align: center">
-        {{ book.name }}
-    </h5>
-    <h6 class="card-text" style="text-align: center">
-        {{ book.author }}
-    </h6>
-      {%  endfor %}
-  </div>
 </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title" style="text-align: center;font-family: monospace;font-size: 2em; color: darkorchid">My Skills 🛠️</h3>
+                    <h5 style="text-align: center;font-family: monospace;font-size: 1em;" >As a programmer, I primarily use Python for my projects. I plan to replace Python with lua or ruby in the near future. </h5>
+                    <h5 style="text-align: center;font-family: monospace;font-size: 1em;" >I also have a strong knowledge of Bash and the command line. I can confidently claim that I am a linux sysadmin myself.</h5>
+                    <h5 style="text-align: center;font-family: monospace;font-size: 1em;" >I can write decent code in languages such as C/C++, ruby and lua, but I have to improve on it.</h5>
+            </div>
+        </div>
+    </div>
 </div>
-    <footer>
-        <h6  class="text-muted" style="text-align: center">&copy; 2022 Suvid Datta/Amazeryogo</h6>
-            <h6 class="text-muted" style="text-align: center">Your IP is {{ip}} , dont panic</h6>
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-muted">© 2020 Suvid Datta</p>
+                    <a href="github.com/Amazeryogo">Github</a>
+                    <a href="https://www.instagram.com/Amazeryogo/">Instagram</a>
+                    <a href="https://open.spotify.com/user/p46kuy15wgr1aa8x132asq9o4">Spotify</a>
+                </div>
+            </div>
+        </div>
     </footer>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>

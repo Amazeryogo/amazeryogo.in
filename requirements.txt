@@ -2,3 +2,4 @@ waitress
 flask
 flask-bootstrap
 requests
+requests-cache
